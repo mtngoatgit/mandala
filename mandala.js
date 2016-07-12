@@ -1,22 +1,33 @@
 $(document).ready(function(){
 
+var cel = $('.cel'); 
+var ter = $('.ter');
+var tel = $('.tel');
 
-$('.cel').hover(function (){
-    $('.cel').addClass('orangeD');
+cel.hover(function (){
+    cel.addClass('ocean');
+    $('.outer-darkness').addClass('ocean');
+    // $('.outer-darkness').addClass(<div>John</div>)
 }, function() {
-    $('.cel').removeClass('orangeD');
+    cel.removeClass('ocean');
+    $('.outer-darkness').removeClass('ocean');
+
 })
 
-$('.ter').hover(function (){
-    $('.ter').addClass('orangeM');
+ter.hover(function (){
+    ter.addClass('orangeM');
 }, function() {
-    $('.ter').removeClass('orangeM');
+    ter.removeClass('orangeM');
 })
 
-$('.tel').hover(function (){
-    $('.tel').addClass('orangeL');
+tel.hover(function (){
+    tel.addClass('orangeL');
 }, function() {
-    $('.tel').removeClass('orangeL');
+    tel.removeClass('orangeL');
+})
+
+cel.click(function() {
+    $('.outer-darkness').prepend('<img id="bigFoto" src="https://mtngoatregister.files.wordpress.com/2016/06/happy-place.jpg"/>')
 })
 
 
